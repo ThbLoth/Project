@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>BMI Calculator</title>
         <link rel="stylesheet" href="main_Style.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     </head>
     <header>
         <h1>BMI Calculator</h1>
@@ -14,11 +15,11 @@
 
             <form id="BMIform" name="BMIform">
                 <label for="weightInput">Weight : </label>
-                <input type="text" name="weightInput" placeholder="In kilograms">
+                <input type="text" name="weightInput" placeholder="In kilograms" class="textInput">
                 <label for="weightInput">Height : </label>
-                <input type="text" name="heightInput" placeholder="In centimeters">
+                <input type="text" name="heightInput" placeholder="In centimeters"class="textInput">
                 <br>
-                <input type="button" name="submitBtn" value="Calculate my BMI !" onclick="BMIcompute()">
+                <input id="btnSub" type="button" name="submitBtn" value="Calculate my BMI !" onclick="BMIcompute()">
             </form>
 
         </div>
@@ -34,15 +35,14 @@
             <h4>BMI = weight/(height)²</h4>
             <p>The result you get will classify you into differents categories, from Underweight to Extremly Obese<br>
                 You can see more by looking at the table underneath.</p>
-            
-            <img src="BMIchart.png" alt="BMI Chart table" width="50%">
 
         </div>
+        <img src="BMIchart.png" alt="BMI Chart table" width="50%" id="BMIchart">
         
     </body>
     
     <footer>
-        <!--On mettra des infos ici-->
+        <a href="https://github.com/ThbLoth/Project">Source code</a>
     </footer>
 
     <script src="main_Script.js">
