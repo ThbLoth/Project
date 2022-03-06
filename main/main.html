@@ -5,9 +5,45 @@
         <title>BMI Calculator</title>
         <link rel="stylesheet" href="main_Style.css">
     </head>
+    <header>
+        <h1>BMI Calculator</h1>
+        <!--Voir pour ajouter nos logos-->
+    </header>
     <body>
+        <div id="formDiv">
+
+            <form id="BMIform" name="BMIform">
+                <label for="weightInput">Weight : </label>
+                <input type="text" name="weightInput" placeholder="In kilograms">
+                <label for="weightInput">Height : </label>
+                <input type="text" name="heightInput" placeholder="In centimeters">
+                <br>
+                <input type="button" name="submitBtn" value="Calculate my BMI !">
+            </form>
+
+        </div>
+
+        <div id="BMIresultDiv">
+
+        </div>
+
+        <div id="informationsDIV">
+
+            <h3>What is the BMI ?</h3>
+            <p>The BMI is a value computed with the height and the weight of a person following this formula :</p>
+            <h4>BMI = weight/(height)²</h4>
+            <p>The result you get will classify you into differents categories, from Underweight to Extremly Obese<br>
+                You can see more by looking at the table underneath.</p>
+            
+            <img src="BMIchart.png" alt="BMI Chart table" width="50%">
+
+        </div>
         
     </body>
+    
+    <footer>
+        <!--On mettra des infos ici-->
+    </footer>
 
     <script src="main_Script.js">
 
