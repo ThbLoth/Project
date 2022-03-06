@@ -10,18 +10,17 @@ function BMIcompute(){
         alert("Please enter a height");
     }else{
         BMI= weight/(height*height);
-        alert(BMI.toFixed(1));
 
         if (BMI<18){
-            alert(BMI.toFixed(1) + "Underweight");
+            alert(BMI.toFixed(1) + " Underweight");
         }else if (BMI>18 && BMI<24){
-            alert(BMI.toFixed(1) + "Normal/Healthy");
+            alert(BMI.toFixed(1) + " Normal/Healthy");
         }else if (BMI>24 && BMI<29){
-            alert(BMI.toFixed(1) + "Overweight");
+            alert(BMI.toFixed(1) + " Overweight");
         }else if(BMI>29 && BMI<39){
-            alert(BMI.toFixed(1) + "Obese");
+            alert(BMI.toFixed(1) + " Obese");
         }else{
-            alert(BMI.toFixed(1) + "Extremely Obese");
+            alert(BMI.toFixed(1) + " Extremely Obese");
         }
     }
 
