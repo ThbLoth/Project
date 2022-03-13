@@ -33,6 +33,8 @@
             </div>
         </div>
 
+
+
         <div id="informationsDIV">
 
             <h3>What is the BMI ?</h3>
@@ -61,17 +63,21 @@
                         }
                     },
                     BMIgroup(){
+                        if (this.weight == 0 || this.height == 0){
+                            return null
+                        }
+
                         if (this.BMI<15){
                             return "Severly Underweight"
-                        }else if (this.BMI>15 && this.BMI<18){
+                        }else if (this.BMI>15 && this.BMI<=18){
                             return "Underweight"
-                        }else if (this.BMI>18 && this.BMI<24){
+                        }else if (this.BMI>18 && this.BMI<=24){
                             return "Healthy"
-                        }else if (this.BMI>24 && this.BMI<29){
+                        }else if (this.BMI>24 && this.BMI<=29){
                             return "Overweight"
-                        }else if (this.BMI>29 && this.BMI<39){
+                        }else if (this.BMI>29 && this.BMI<=39){
                             return "Obese"
-                        }else{
+                        }else if (this.BMI>39){
                             return "Extreme Obesity"
                         }
                     }
