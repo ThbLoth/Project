@@ -11,21 +11,26 @@
         <!--Voir pour ajouter nos logos-->
     </header>
     <body>
-        <div id="formDiv">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <div id="app">
+            <div id="formDiv">
 
-            <form id="BMIform" name="BMIform">
-                <label for="weightInput">Weight : </label>
-                <input type="text" name="weightInput" placeholder="In kilograms" class="textInput">
-                <label for="weightInput">Height : </label>
-                <input type="text" name="heightInput" placeholder="In centimeters"class="textInput">
+                <form id="BMIform" name="BMIform">
+                    <label for="weightInput">Weight : </label>
+                    <input type="number" name="weightInput" placeholder="In kilograms" class="textInput" min="0" v-model.number="weight">
+                    <label for="heightInput">Height : </label>
+                    <input type="number" name="heightInput" placeholder="In centimeters"class="textInput" min="0" v-model.number="height">
+                    <br>
+                </form>
+
+            </div>
+
+            <div id="BMIresultDiv">
+                <p>According to the informations you provided, your BMI equals to :</p>
+                <span id="computedBMI"> {{ BMI }} </span>
                 <br>
-                <input id="btnSub" type="button" name="submitBtn" value="Calculate my BMI !" onclick="BMIcompute()">
-            </form>
-
-        </div>
-
-        <div id="BMIresultDiv">
-
+                <span id="BMIgroup"> {{ BMIgroup }} </span>
+            </div>
         </div>
 
         <div id="informationsDIV">
@@ -38,14 +43,45 @@
 
         </div>
         <img src="BMIchart.png" alt="BMI Chart table" width="50%" id="BMIchart">
-        
+
+        <script>
+            new Vue({
+                el:'#app',
+                data:{
+                    weight:75, //set default value
+                    height:185, //set default value
+                },
+                computed:{
+                    BMI(){
+                        let cBMI = this.weight/Math.pow((this.height)/100,2)
+                        if (this.weight ==0 || this.height ==0){
+                            return 0
+                        }else {
+                            return Math.round(cBMI) 
+                        }
+                    },
+                    BMIgroup(){
+                        if (this.BMI<15){
+                            return "Severly Underweight"
+                        }else if (this.BMI>15 && this.BMI<18){
+                            return "Underweight"
+                        }else if (this.BMI>18 && this.BMI<24){
+                            return "Healthy"
+                        }else if (this.BMI>24 && this.BMI<29){
+                            return "Overweight"
+                        }else if (this.BMI>29 && this.BMI<39){
+                            return "Obese"
+                        }else{
+                            return "Extreme Obesity"
+                        }
+                    }
+                }
+            }).mount("#app")
+        </script>
+
     </body>
     
     <footer>
         <a href="https://github.com/ThbLoth/Project">Source code</a>
     </footer>
-
-    <script src="main_Script.js">
-
-    </script>
 </html>

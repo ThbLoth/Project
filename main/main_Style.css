@@ -2,6 +2,7 @@ header{
     background-color: cornflowerblue;
     text-align: center;
     border: 1px black solid;
+    color:white;
 }
 
 body{
@@ -43,15 +44,6 @@ a:hover{
     margin-right: auto;
 }
 
-#btnSub{
-    margin-top: 10px;
-    background-color: transparent;
-    border: 1px solid white;
-    color:white;
-    border-radius: 3px;
-    font-size: 20px;
-}
-
 #btnSub:hover{
     color:lightgray;
     border-color: lightgray;
@@ -88,3 +80,26 @@ h4{
 #BMIchart{
     padding-left: 15px;
 }
+
+#BMIresultDiv{
+    text-align: center;
+    color: white;
+    border : 2px solid black;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+}
+
+#computedBMI{
+    color:red;
+    font-weight: bold;
+}
+
+#BMIgroup{
+    font-style: italic;
+}
+
