@@ -1,26 +1,86 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Login Page</title>
-        <link rel="stylesheet" href="login_style.css">
-    </head>
-    <body>
-        <h2>Login</h2>
-        <form name="loginForm" id="loginForm">
-            <label for="userInput">Username</label>
-            <input type="text" name="userInput" id="userInput" placeholder="Username">
-            <br>
-            <label for="passwordInput">Password</label>
-            <input type="password" name="passwordInput" id="passwordInput" placeholder="Password">
-            <br>
-            <input type="button" name="submitBTN" id="submitBTN" value="Connect">
-        </form>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login-css.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Login Page</title>
+</head>
+<script src="login_js.js"></script>
 
-        <a id="RegisterTxt" href="">No account ? Create one now !</a>
-        <a id="Direct" href="../main/main.html">Continue without an account</a>
-        <p>© PL & TL 2022</p>
-        <p>All rights reserved</p>
-    </body>
-    <script src="login_script.js"></script> 
-</html>  
+<header>
+  <h1>WELCOME TO YOUR BMI CALCULATOR</h1>
+</header>
+<body>
+    <div class = "pls_log">
+      <h2>LOGIN</h2>
+    </div>
+
+      <form class = "login_form" name = "login_page" onsubmit= "verification_login()">
+          
+          <label>Email: </label>
+          <input type = "email" placeholder ="Email" name = "mail_login">
+
+          
+          
+          <label>Password: </label>
+          <input type = "password" placeholder="***************" name = "password_login" maxlength="15">
+          
+
+          <br>
+          
+          <input type="button" value="LOGIN" id="button_rl">
+     
+      </form>
+
+      <div class = "pls_reg">
+        <h2>REGISTER</h2>
+      </div>
+      
+
+      <form class = "register_form" name = "register_page" onsubmit= "verification_register()">
+
+        <div class = "name">
+          <label>Name: </label>
+          <input placeholder ="Name" name = "name">
+          </div>  
+
+        <br>
+
+        <div class = "last_name">
+        <label>Last Name: </label>
+        <input placeholder ="Last Name" name = "last_name">
+        </div>  
+
+        <br>
+
+        <div class = "mail">
+        <label>Email: </label>
+        <input type = "email" placeholder ="Email" name = "mail_register">
+        </div>    
+
+        <br>
+        
+        <div class = "password">
+        <label>Password: </label>
+        <input type = "password" placeholder="***************" name = "password_register" maxlength="15">
+        </div>
+
+        <br>
+        
+    
+        <input type="button" value="REGISTER" id="button_rl">
+
+        <br>
+
+      </form>  
+
+      <div class = "no_account">
+        <p> 
+          <a href="#">-> Click here to continue without account</a>
+        </p>
+      </div>
+</body>
+</html>
