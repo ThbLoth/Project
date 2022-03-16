@@ -1,4 +1,36 @@
-h1{
-    color:red;
+header{
+    background-color: cornflowerblue;
     text-align: center;
+    border: 1px black solid;
+    color:white;
 }
+
+body{
+    background-color: steelblue;
+}
+
+footer{
+    background-color: cornflowerblue;
+    text-align: center;
+    border: 1px black solid;
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+a{
+    color:white;
+    text-decoration: none   ;
+}
+
+a:hover{
+    color:lightgray;
+}
+
+*{
+	font-family: 'Roboto';
+}
+
+
+
+
