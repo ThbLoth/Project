@@ -18,20 +18,20 @@
       <h2>LOGIN</h2>
     </div>
 
-      <form class = "login_form" name = "login_page" onsubmit= "verification_login()">
+      <form class = "login_form" name = "login_page">
           
           <label>Email: </label>
-          <input type = "email" placeholder ="Email" name = "mail_login">
+          <input type = "email" placeholder ="Email" name = "mail_login" id = "email_log">
 
           
           
           <label>Password: </label>
-          <input type = "password" placeholder="***************" name = "password_login" maxlength="15">
+          <input type = "password" placeholder="***************" name = "password_login" maxlength="15" id = "password_log">
           
 
           <br>
           
-          <input type="button" value="LOGIN" id="button_rl">
+          <input type="button" value="LOGIN" id="button_rl" onclick="verification_login()">
      
       </form>
 
@@ -40,38 +40,38 @@
       </div>
       
 
-      <form class = "register_form" name = "register_page" onsubmit= "verification_register()">
+      <form class = "register_form" name = "register_page">
 
         <div class = "name">
           <label>Name: </label>
-          <input placeholder ="Name" name = "name">
+          <input placeholder ="Name" name = "name" id = "name_reg" type="text">
           </div>  
 
         <br>
 
         <div class = "last_name">
         <label>Last Name: </label>
-        <input placeholder ="Last Name" name = "last_name">
+        <input placeholder ="Last Name" name = "last_name" id = "last_name_reg">
         </div>  
 
         <br>
 
         <div class = "mail">
         <label>Email: </label>
-        <input type = "email" placeholder ="Email" name = "mail_register">
+        <input type = "email" placeholder ="Email" name = "mail_register" id = "email_reg">
         </div>    
 
         <br>
         
         <div class = "password">
         <label>Password: </label>
-        <input type = "password" placeholder="***************" name = "password_register" maxlength="15">
+        <input type = "password" placeholder="***************" name = "password_register" maxlength="15" id = "password_reg">
         </div>
 
         <br>
         
     
-        <input type="button" value="REGISTER" id="button_rl">
+        <input type="button" value="REGISTER" id="button_rl" onclick="verification_register()">
 
         <br>
 
@@ -79,7 +79,7 @@
 
       <div class = "no_account">
         <p> 
-          <a href="#">-> Click here to continue without account</a>
+          <a href="../main/main.html">-> Click here to continue without account</a>
         </p>
       </div>
 </body>
