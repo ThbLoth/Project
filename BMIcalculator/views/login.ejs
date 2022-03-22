@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Login Page</title>
+</head>
+
+<style>
+    .login_form{
+  text-align: center;
+  margin-top: 10px;
+  background-color: cornflowerblue;
+  border: 2px solid black;
+  width: 40%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.register_form{
+  text-align: center;
+  margin-top: 10px;
+  background-color: cornflowerblue;
+  border: 2px solid black;
+  width: 40%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.pls_reg{
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  
+  width: 40%;
+  padding-top: 5px;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pls_log{
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  
+  width: 40%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1{
+  text-align: center;
+}
+
+body{
+  background-color: steelblue;
+}
+
+a:hover{
+  background-color: grey;
+  text-align: center;
+}
+
+.border{
+  border: 1px solid black;
+}
+
+#button_rl{
+  background-color: transparent;
+  text-transform: uppercase;
+  color: white;
+  border : 1px solid white;
+  border-radius: 3px;
+  font-size: 15px;
+  padding:3px;
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+
+#button_rl:hover{
+  color:lightgray;
+  border-color: lightgray;
+}
+
+label{
+  color: white;
+}
+
+header{
+  background-color: cornflowerblue;
+  text-align: center;
+  border: 1px black solid;
+  color:white;
+}
+
+input{
+  border:solid 1px white;
+  background-color: cornflowerblue;
+  color:white;
+  
+}
+
+input::placeholder{
+  color: white;
+  text-transform: uppercase;
+}
+
+*{
+  font-family: 'Roboto';
+}
+
+.no_account{
+  text-align: center;
+  margin-top: 15px;
+  
+  
+  padding-top: 25px;
+  padding-bottom: 25px;
+  
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: underline;
+  
+}
+
+#button_rl{
+  margin-top: 20px;
+}
+
+a{
+  color:white;
+  text-decoration: none;
+}
+</style>
+
+<header>
+  <h1>WELCOME TO YOUR BMI CALCULATOR</h1>
+</header>
+<body>
+    <div class = "pls_log">
+      <h2>LOGIN</h2>
+    </div>
+
+      <form class = "login_form" action="/login/connect" method="post">
+          
+          <label>Email: </label>
+          <input type = "email" placeholder ="Email" name = "mail">
+
+          
+          
+          <label>Password: </label>
+          <input type = "password" placeholder="***************" name = "password" maxlength="15">
+          
+
+          <br>
+          
+          <button id="button_rl" type="submit">Login</button>
+     
+      </form>
+
+      <div class = "pls_reg">
+        <h2>REGISTER</h2>
+      </div>
+      
+
+      <form class = "register_form" action="/login/create" method="post">
+
+        <div class = "name">
+          <label>Name: </label>
+          <input placeholder ="Name" name = "name" type="text">
+          </div>  
+
+        <br>
+
+        <div class = "last_name">
+        <label>Last Name: </label>
+        <input placeholder ="Last Name" name = "lastName" type="text">
+        </div>  
+
+        <br>
+
+        <div class = "mail">
+        <label>Email: </label>
+        <input type = "email" placeholder ="Email" name = "mail">
+        </div>    
+
+        <br>
+        
+        <div class = "password">
+        <label>Password: </label>
+        <input type = "password" placeholder="***************" name = "password" maxlength="15">
+        </div>
+
+        <br>
+        
+        <button id="button_rl" type="submit">Register</button>
+
+        <br>
+
+      </form>  
+
+      <div class = "no_account">
+        <p> 
+          <a href="/bmi/mainpage">-> Click here to continue without account</a>
+        </p>
+      </div>
+</body>
+</html>

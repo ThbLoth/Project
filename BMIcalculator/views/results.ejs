@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Results</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    </head>
+
+    <style>
+        header{
+    background-color: cornflowerblue;
+    text-align: center;
+    border: 1px black solid;
+    color:white;
+}
+
+body{
+    background-color: steelblue;
+}
+
+footer{
+    background-color: cornflowerblue;
+    text-align: center;
+    border: 1px black solid;
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+a{
+    color:white;
+    text-decoration: none   ;
+}
+
+a:hover{
+    color:lightgray;
+}
+
+*{
+	font-family: 'Roboto';
+}
+
+#resultTableDiv{
+    text-align: center;
+    color: white;
+    margin-top: 25px;
+}
+
+table{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border : 2px solid white;
+    border-collapse: collapse;
+}
+
+td,th{
+    border : 2px solid white;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+
+
+    </style>
+    <header>
+        <h1>BMI Calculator <br>
+        Results</h1>
+        <!--Voir pour ajouter nos logos-->
+    </header>
+    <body>
+        <div id="resultTableDiv">
+
+            <table>
+                <tr>
+                    <th>Height</th>
+                    <th>Weight</th>
+                    <th>BMI</th>
+                </tr>
+
+                <% if(userData.length != 0){
+                    userData.forEach(function(data){
+                %>
+                <tr>
+                    <td><%=data.height %></td>
+                    <td><%=data.weight %></td>
+                    <td><%=data.BMI %></td>
+                </tr>
+                <% }) %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="3">No data registered for your account</td>
+                    </tr>
+                <% } %>
+                
+            </table>
+
+        </div>
+    </body>
+    
+    <footer>
+        <a href="https://github.com/ThbLoth/Project">Source code</a>
+    </footer>
+</html>
